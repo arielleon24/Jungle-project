@@ -25,10 +25,28 @@
             <% end %>
           </ul>
         </li>
+      </ul>
+      <ul class="nav navbar-nav">
         <li>
-          <%= link_to 'About', 'about#show' %>
+          <%= link_to 'About', :about %>
         </li>
       </ul>
+      <% if current_user %>
+        <ul class="nav navbar-nav">
+        Signed in as <%= current_user.email %>
+        <%= link_to "Logout", '/logout' %>
+        </ul>
+      <% else %>
+        <ul class="nav navbar-nav">
+        <li>
+          <%= link_to 'Login', '/login' %>
+        </li>
+        <li>
+          <%= link_to 'Signup', '/signup' %>
+        </li>
+      </ul>
+         <% end %>
+    
       <ul class="nav navbar-nav navbar-right">
        <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -39,6 +57,7 @@
           <ul class="dropdown-menu">
             <li><%= link_to 'Dashboard', [:admin, :root] %></li>
             <li><%= link_to 'Products',  [:admin, :products] %></li>
+            <li><%= link_to 'Categories', [:admin, :categories] %></li>
           </ul>
         </li>
         <li>
