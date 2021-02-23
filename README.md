@@ -3,6 +3,10 @@
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 It is a responsive MPA using a Rails backend with Active Record.
 
+## Gif
+
+!["Demo"](https://github.com/arielleon24/Jungle-project/blob/master/app/assets/images/JungleDemo.gif?raw=true)
+
 
 ## Setup
 
